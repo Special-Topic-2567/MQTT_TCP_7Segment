@@ -416,3 +416,7 @@ void app_main(void)
 17. ส่งตัวเลข 2 หลักจาก mqttexplorer ผ่านทาง topic ที่กำหนดในข้อ 13
 18. ตรวจสอบว่ามีเลขที่ป้อนทาง mqtt explorer ปรากฏที่ 7 segment อย่างถูกต้องหรือไม่
 
+### ส่งการทดสอบ
+![Screenshot 2024-10-10 153746](https://github.com/user-attachments/assets/5add9a4b-578c-4458-a4a9-5d4ccec849f7)
+![image](https://github.com/user-attachments/assets/600591f1-79c1-41bd-80b1-51219e8321e9)
+
