@@ -28,6 +28,6 @@ dependencies:
     path: components/SevenSegment 
     version: 57dca1419ad633cefb7d1f9ef2871cc222f5c3ed
 ```
-ส่วนที่ต้องแก้คือ git url
+ส่วนที่ต้องแก้คือ git url ใน  LED และ SEVENSEGMENT
 
 5.       
