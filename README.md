@@ -157,3 +157,5 @@ extern "C"
 
 #endif
 ```
+
+7. build ดูว่ามี error หรือไม่
