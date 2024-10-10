@@ -163,6 +163,20 @@ extern "C"
 #endif
 ```
 
-7. build ดูว่ามี error หรือไม่
+7. ตรวจสอบไฟล์ CMakeLists.txt ใน main ว่ามีการเพิ่มไฟล์ connector แล้วหรือไม่
+    - ถ้ายังไม่เพิ่ม ให้เพิ่มด้วย
+    - เมื่อเพิ่มแล้ว ไฟล์ CMakeLists.txt จะมีเนื้อหาตามตัวอย่าง
+  
+```CMake
+idf_component_register(
+          SRCS "sevensegment_c_connector.cpp"
+                led_c_connector.cpp"
+                "app_main.c"
+          INCLUDE_DIRS ".")
+```      
+
+
+
+9.   build ดูว่ามี error หรือไม่
 
 ### แก้ไขไฟล์ main ของโปรเจคตัวอย่าง
