@@ -32,7 +32,7 @@ dependencies:
 
 5. build  1 ครั้ง จะได้โฟลเดอร์ managecomponent และมี 2 โฟลเดอร์ย่อยอยู่ด้านใน คือ LED และ SEVENSEGMENT
 
-6. เพิ่ม code สำหรับการเชื่อมโยงระหว่างภาษา C และ C++ ไว้ใน main
+6. เพิ่ม code สำหรับการเชื่อมโยงระหว่างภาษา C และ C++ ไว้ใน main รวมทั้งสิ้น 4 ไฟล์  
  
 6.1 ไฟล์ led_c_connector.cpp
 
