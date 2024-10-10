@@ -30,4 +30,61 @@ dependencies:
 ```
 ส่วนที่ต้องแก้คือ git url ใน  LED และ SEVENSEGMENT
 
-5.       
+5. build  1 ครั้ง จะได้โฟลเดอร์ managecomponent และมี 2 โฟลเดอร์ย่อยอยู่ด้านใน คือ LED และ SEVENSEGMENT
+
+6. เพิ่ม code สำหรับการเชื่อมโยงระหว่างภาษา C และ C++ ไว้ใน main
+ 
+   6.1 ไฟล์ led_c_connector.cpp
+
+``` cpp
+#include "led_c_connector.h"
+#include "LED.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+// Inside this "extern C" block, I can implement functions in C++, which will externally 
+//   appear as C functions (which means that the function IDs will be their names, unlike
+//   the regular C++ behavior, which allows defining multiple functions with the same name
+//   (overloading) and hence uses function signature hashing to enforce unique IDs),
+
+
+LED led1(16); 
+
+void LED_ON() 
+{
+    led1.ON();
+}
+
+void LED_OFF() 
+{
+    led1.OFF();
+}
+
+#ifdef __cplusplus
+}
+#endif
+```
+
+      6.1 ไฟล์ led_c_connector.h
+``` cpp
+#ifndef LED_C_CONNECTOR_H
+#define LED_C_CONNECTOR_H
+
+#ifdef __cplusplus
+extern "C"
+{
+#endif
+    void LED_ON();
+    void LED_OFF();
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif
+```
+      
+
+  
