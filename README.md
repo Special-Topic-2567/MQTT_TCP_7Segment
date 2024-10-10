@@ -34,7 +34,7 @@ dependencies:
 
 6. เพิ่ม code สำหรับการเชื่อมโยงระหว่างภาษา C และ C++ ไว้ใน main
  
-   6.1 ไฟล์ led_c_connector.cpp
+6.1 ไฟล์ led_c_connector.cpp
 
 ``` cpp
 #include "led_c_connector.h"
@@ -67,7 +67,8 @@ void LED_OFF()
 #endif
 ```
 
-      6.1 ไฟล์ led_c_connector.h
+6.2 ไฟล์ led_c_connector.h
+
 ``` cpp
 #ifndef LED_C_CONNECTOR_H
 #define LED_C_CONNECTOR_H
@@ -87,4 +88,72 @@ extern "C"
 ```
       
 
-  
+6.3 ไฟล์ sevensegment_c_connector.cpp
+
+```cpp
+#include "sevensegment_c_connector.h"
+ #include "SevenSegment.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+SevenSegment s1(0);
+SevenSegment s2(4);
+
+void s1_displayOn()
+{
+    s1.DisplayOn();    
+}
+
+void s1_displayOff()
+{
+    s1.DisplayOff();
+}
+
+void s2_displayOn()
+{
+    s2.DisplayOn();    
+}
+
+void s2_displayOff()
+{
+    s2.DisplayOff();
+}
+
+void s1_displayNumber(int number)
+{
+    s1.DisplayNumber(number);
+}
+
+void s2_displayNumber(int number)
+{
+    s2.DisplayNumber(number);
+}
+
+#ifdef __cplusplus
+}
+#endif
+```
+6.4 ไฟล์ sevensegment_c_connector.h
+```cpp
+#ifndef SEVENSEGMENT_C_CONNECTOR_H
+#define SEVENSEGMENT_C_CONNECTOR_H
+
+#ifdef __cplusplus
+extern "C"
+{
+#endif
+    void s1_displayOn();
+    void s1_displayOff();
+    void s2_displayOn();
+    void s2_displayOff();
+    void s1_displayNumber(int number);
+    void s2_displayNumber(int number);
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif
+```
